@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textMember"
-        android:layout_width="wrap_content"
+    <!-- Botón para agregar miembros -->
+    <Button
+        android:id="@+id/btnAddMember"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pantalla de Miembros 👥"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
-</FrameLayout>
+        android:text="Agregar Miembro" />
+
+    <!-- Lista de miembros -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMembers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

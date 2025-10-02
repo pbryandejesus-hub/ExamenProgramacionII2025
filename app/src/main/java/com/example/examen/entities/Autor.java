@@ -7,8 +7,15 @@ import androidx.room.PrimaryKey;
 public class Autor {
     @PrimaryKey(autoGenerate = true)
     public int id;
+
     public String nombre;
 
-    public Autor() {}
-    public Autor(String nombre) { this.nombre = nombre; }
+    // 🔹 Constructor vacío obligatorio para Room
+    public Autor() {
+    }
+
+    // 🔹 Constructor para inicializar Autor
+    public Autor(String nombre) {
+        this.nombre = nombre;
+    }
 }
